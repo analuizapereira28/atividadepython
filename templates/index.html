@@ -1,0 +1,23 @@
+<html lang="en">
+ <head>
+<meta charset="UTF-8">
+<title>Atividade 4</title>
+</head>
+<body>
+<h1> Atividade 4:</h1>
+
+<form action="/verificar" method="post">
+
+ <h1>Verificar a idade</h1> <!-- Título principal da página -->
+    <form action="/verificar" method="post"> <!-- Formulário para enviar o número para verificação -->
+        <label for="idade">Digite a idade:</label> <!-- Rótulo do campo de entrada -->
+        <input type="number" id="idade" name="idade" required> <!-- Campo de entrada para o número -->
+        <button type="submit">Verificar</button> <!-- Botão de envio do formulário -->
+    </form>
+    <div id="resultado">
+        {% if resultado %} <!-- Verifica se há um resultado a ser exibido -->
+            {{ resultado }} <!-- Exibe o resultado da verificação (par ou ímpar) -->
+        {% endif %}
+    </div>
+</body>
+</html>
